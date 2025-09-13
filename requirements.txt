@@ -1,0 +1,14 @@
+jupyter
+langchain
+langchain-openai
+langchain-ollama
+langchain-core
+langchain-community
+langgraph
+chromadb
+matplotlib
+openai
+pandas
+numpy
+requests
+plotly
