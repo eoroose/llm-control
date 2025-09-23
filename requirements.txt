@@ -1,4 +1,4 @@
-jupyter
+# llm 
 langchain
 langchain-openai
 langchain-ollama
@@ -6,9 +6,19 @@ langchain-core
 langchain-community
 langgraph
 chromadb
-matplotlib
 openai
+
+# speech_to_text
+SpeechRecognition
+pyttsx3
+pyaudio
+
+# analysis
+jupyter
+matplotlib
 pandas
 numpy
-requests
 plotly
+
+# other
+requests
