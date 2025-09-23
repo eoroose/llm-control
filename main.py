@@ -16,16 +16,17 @@ response_system_message = f"""
         answer the user's question accordingly.
     """
 
-detector = WakeWordDetector(r"\bhey\s+tyson\b")
-text = detector.start_listening()
-print(f"Detected wake word in: {text}")
+if __name__ == "__main__":
+    detector = WakeWordDetector(r"\bhey\s+tyson\b")
+    text = detector.start_listening()
+    print(f"Detected wake word in: {text}")
 
-decision = DecisionNode.invoke(llm, decision_system_message, possible_decisions, text)
-print(f"Decision: {decision}")
+    decision = DecisionNode.invoke(llm, decision_system_message, possible_decisions, text)
+    print(f"Decision: {decision}")
 
-if decision == "answer_question":
-    response = ResponseNode.invoke(llm, response_system_message, text)
-    print(f"Response: {response}")
-    SpeechSynthesizer.say(response.content)
-else:
-    pass
+    if decision == "answer_question":
+        response = ResponseNode.invoke(llm, response_system_message, text)
+        print(f"Response: {response}")
+        SpeechSynthesizer.say(response.content)
+    else:
+        pass
