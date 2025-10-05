@@ -13,6 +13,8 @@ SpeechRecognition
 pyttsx3
 pyaudio
 sounddevice
+webrtcvad
+scipy
 
 # analysis
 jupyter
