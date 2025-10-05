@@ -47,11 +47,11 @@ class SpeechDetectorV2:
                 audio_buffer.extend(frame)
             else:
                 if audio_buffer:
-                    audio_data = self.raw_to_audio_data(bytes(audio_buffer))
+                    audio_data = self.raw_to_audio_data(bytes(audio_buffer)) # speech recognition does not support PCM16 directly
                     text = self.recognize_speech(audio_data)
                     if text and pattern.search(text):
                         print(f"Wake word detected: {text}")
-                        return text, self.audio_to_pcm16(audio_data)
+                        return text, audio_buffer # return raw PCM16 bytes
                     audio_buffer = bytearray()
 
 
