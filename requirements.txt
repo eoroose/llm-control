@@ -8,7 +8,7 @@ langgraph
 chromadb
 openai
 
-# speech_to_text
+# speech detection
 SpeechRecognition
 pyttsx3
 pyaudio

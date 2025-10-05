@@ -1,4 +1,3 @@
-import asyncio
 import base64
 import io
 import re
@@ -205,6 +204,7 @@ class RealtimeOpenAI():
 
 
 if __name__ == "__main__":
+    import asyncio
     import argparse
     parser = argparse.ArgumentParser(description="Select speech detector version.")
     parser.add_argument("detector_version", type=int, choices=[1, 2],
