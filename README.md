@@ -5,17 +5,6 @@
 OPENAI_API_KEY=
 ```
 
-```
-docker compose up -d --build
-```
-
-run test
-```
-docker compose exec -it llm-control /bin/bash
-cd src/llm
-python3 llm_nodes.py
-```
-
 ### run without docker
 - current Python version: 3.12.9
 - On macOS, Docker cannot directly access hardware devices (microphone)
